@@ -22,3 +22,4 @@ return view('admin.posts.index', compact('posts'));
 
    }
 }
+?>
