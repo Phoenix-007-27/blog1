@@ -14,6 +14,10 @@ class StoreController extends Controller
 
 $data = $request->validated();
 
+dd($data);
+
+
+
 $data['password'] = Hash::make($data['password']);
 
 User::firstOrCreate(['email' => $data['email']], $data);

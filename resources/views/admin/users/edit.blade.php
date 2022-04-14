@@ -50,6 +50,20 @@
                   @enderror
                 </div>
 
+                <div class="form-group w-50">
+                    Роль
+                        <select class="form-control"  name="role">
+                          @foreach($roles as $id => $role)
+                        <option value="{{$id}}"
+                         {{$id == $user->role ? ' selected' : ''}}>
+                         {{$role}}
+                        @error('role')
+                        <div class="text-danger">Это поле необходимо для заполнения</div>
+                        @enderror
+                         @endforeach
+                         </select>
+                   </div>
+
           <input type="submit" class="btn btn-primary" value="Изменить">
            </form>
 </div>
